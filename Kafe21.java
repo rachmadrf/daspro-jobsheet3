@@ -7,7 +7,7 @@ public class Kafe21 {
         Scanner input = new Scanner(System.in);
 
         boolean keanggotaan;
-        int jmlKopi, jmlTeh, jmlRoti;
+        int jmlKopi, jmlTeh, jmlRoti, nominalInt;
         double hargaKopi = 12000.0, hargaTeh = 7000.0, hargaRoti = 20000.0, totalHarga, nominalBayar; 
         float diskon = 10 /100f;
 
@@ -26,11 +26,11 @@ public class Kafe21 {
 
         //nominal bayar
         nominalBayar = totalHarga - (diskon * totalHarga);
+        nominalInt = (int) nominalBayar;
 
         System.out.println("Keanggotaan pelanggan " + keanggotaan);
         System.out.println("Item pembelian " + jmlKopi + " kopi, " + jmlTeh + " teh, " + jmlRoti + " roti");
         System.out.println("Nominal bayar Rp " + nominalBayar);
-
+        System.out.println("Nominal bayar (Int) Rp. " + nominalInt);
     }
-
 }
